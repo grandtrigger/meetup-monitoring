@@ -1,0 +1,11 @@
+external:
+  clients:
+    product: ${EXTERNAL_CLIENTS_PRODUCT:http://localhost:8091}
+    price: ${EXTERNAL_CLIENTS_PRICE:http://localhost:8090}
+spring:
+  sleuth:
+    baggage:
+      remote-fields:
+        - traceId
+  application:
+    name: product-orchestrator
